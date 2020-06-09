@@ -169,14 +169,14 @@
             this.TraCuuTTToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuTraCuu});
             this.TraCuuTTToolStripMenuItem.Name = "TraCuuTTToolStripMenuItem";
-            this.TraCuuTTToolStripMenuItem.Size = new System.Drawing.Size(115, 20);
-            this.TraCuuTTToolStripMenuItem.Text = "Tra Cứu Thông Tin";
+            this.TraCuuTTToolStripMenuItem.Size = new System.Drawing.Size(137, 20);
+            this.TraCuuTTToolStripMenuItem.Text = "Tra Cứu Lương Cơ Bản";
             // 
             // mnuTraCuu
             // 
             this.mnuTraCuu.Name = "mnuTraCuu";
-            this.mnuTraCuu.Size = new System.Drawing.Size(209, 22);
-            this.mnuTraCuu.Text = "Tra Cứu Lương Nhân Viên";
+            this.mnuTraCuu.Size = new System.Drawing.Size(180, 22);
+            this.mnuTraCuu.Text = "Theo Chức Vụ";
             this.mnuTraCuu.Click += new System.EventHandler(this.mnuTraCuu_Click);
             // 
             // thoátHệThốngToolStripMenuItem

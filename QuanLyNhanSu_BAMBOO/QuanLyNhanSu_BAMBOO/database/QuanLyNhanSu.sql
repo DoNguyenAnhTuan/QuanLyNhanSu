@@ -44,6 +44,8 @@ CREATE TABLE NhanVien(
 	MaTaiKhoan INT NOT NULL,
 	TenDangNhap VARCHAR(30) NOT NULL,
 	MatKhau VARBINARY(Max)NOT NULL,
+	MaChucVu int not null,
+	MaNgoaiNgu int not null
 	CONSTRAINT pk_NhanVien_TaiKhoan FOREIGN KEY(MaTaiKhoan) REFERENCES dbo.TaiKhoan(MaTaiKhoan)
 )
 GO
@@ -53,14 +55,18 @@ INSERT INTO dbo.NhanVien
           DienThoai ,
           MaTaiKhoan ,
           TenDangNhap ,
-          MatKhau
+          MatKhau,
+		  MaChucVu,
+		  MaNgoaiNgu
         )
-VALUES  ( N'Admin' , -- TenNhanVien - nvarchar(50)
+VALUES  ( N'Giám Đốc' , -- TenNhanVien - nvarchar(50)
          '2000-02-02' , -- NgaySinh - date
           '098123123' , -- DienThoai - varchar(13)
           1 , -- MaTaiKhoan - int
           'admin' , -- TenDangNhap - varchar(30)
-          pwdencrypt('admin')  -- MatKhau - varbinary(max)
+          pwdencrypt('admin'),  -- MatKhau - varbinary(max)
+		  '1',
+		  '1'
         )
         INSERT INTO dbo.NhanVien
         ( TenNhanVien ,
@@ -68,29 +74,18 @@ VALUES  ( N'Admin' , -- TenNhanVien - nvarchar(50)
           DienThoai ,
           MaTaiKhoan ,
           TenDangNhap ,
-          MatKhau
+          MatKhau,
+		  MaChucVu,
+		  MaNgoaiNgu
         )
-VALUES  ( N'Nguyễn Van A' , -- TenNhanVien - nvarchar(50)
+VALUES  ( N'Đỗ Nguyễn Anh Tuấn' , -- TenNhanVien - nvarchar(50)
          '2002-02-02' , -- NgaySinh - date
           '0983453635' , -- DienThoai - varchar(13)
           2 , -- MaTaiKhoan - int
-          'quanly' , -- TenDangNhap - varchar(30)
-          pwdencrypt('quanly')  -- MatKhau - varbinary(max)
-        )
-        INSERT INTO dbo.NhanVien
-        ( TenNhanVien ,
-          NgaySinh ,
-          DienThoai ,
-          MaTaiKhoan ,
-          TenDangNhap ,
-          MatKhau
-        )
-VALUES  ( N'Nguyễn Hoàng Anh Thư' , -- TenNhanVien - nvarchar(50)
-         '2000-02-02' , -- NgaySinh - date
-          '098123123' , -- DienThoai - varchar(13)
-          3 , -- MaTaiKhoan - int
-          'nhanvien' , -- TenDangNhap - varchar(30)
-          pwdencrypt('nhanvien')  -- MatKhau - varbinary(max)
+          'anhtuan' , -- TenDangNhap - varchar(30)
+          pwdencrypt('123'),  -- MatKhau - varbinary(max)
+		  '2',
+		  '2'
         )
 GO
 IF OBJECT_ID('ChucNang') IS NOT NULL

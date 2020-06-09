@@ -28,21 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblMaLop = new System.Windows.Forms.Label();
             this.txtTenLop = new System.Windows.Forms.TextBox();
             this.txtGVCN = new System.Windows.Forms.TextBox();
             this.dgvLuong = new System.Windows.Forms.DataGridView();
+            this.colTenViTri = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMucLuongI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMucLuongII = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMucLuongIII = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.colTenViTri = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMucLuongI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMucLuongII = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMucLuongIII = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblSoLuong = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLuong)).BeginInit();
             this.SuspendLayout();
@@ -80,16 +80,16 @@
             // 
             this.dgvLuong.AllowUserToAddRows = false;
             this.dgvLuong.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dgvLuong.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvLuong.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dgvLuong.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvLuong.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvLuong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLuong.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colTenViTri,
@@ -104,6 +104,32 @@
             this.dgvLuong.Size = new System.Drawing.Size(806, 239);
             this.dgvLuong.TabIndex = 43;
             this.dgvLuong.Click += new System.EventHandler(this.dgvLuong_Click);
+            // 
+            // colTenViTri
+            // 
+            this.colTenViTri.DataPropertyName = "TenViTri";
+            this.colTenViTri.HeaderText = "Tên Vị Trí";
+            this.colTenViTri.Name = "colTenViTri";
+            this.colTenViTri.Width = 363;
+            // 
+            // colMucLuongI
+            // 
+            this.colMucLuongI.DataPropertyName = "MucLuongI";
+            this.colMucLuongI.HeaderText = "Mức Lương I";
+            this.colMucLuongI.Name = "colMucLuongI";
+            // 
+            // colMucLuongII
+            // 
+            this.colMucLuongII.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colMucLuongII.DataPropertyName = "MucLuongII";
+            this.colMucLuongII.HeaderText = "Mức Lương II";
+            this.colMucLuongII.Name = "colMucLuongII";
+            // 
+            // colMucLuongIII
+            // 
+            this.colMucLuongIII.DataPropertyName = "MucLuongIII";
+            this.colMucLuongIII.HeaderText = "Mức Lương III";
+            this.colMucLuongIII.Name = "colMucLuongIII";
             // 
             // label5
             // 
@@ -160,32 +186,6 @@
             this.label1.TabIndex = 40;
             this.label1.Text = "Tên Vị Trí";
             // 
-            // colTenViTri
-            // 
-            this.colTenViTri.DataPropertyName = "TenViTri";
-            this.colTenViTri.HeaderText = "Tên Vị Trí";
-            this.colTenViTri.Name = "colTenViTri";
-            this.colTenViTri.Width = 363;
-            // 
-            // colMucLuongI
-            // 
-            this.colMucLuongI.DataPropertyName = "MucLuongI";
-            this.colMucLuongI.HeaderText = "Mức Lương I";
-            this.colMucLuongI.Name = "colMucLuongI";
-            // 
-            // colMucLuongII
-            // 
-            this.colMucLuongII.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colMucLuongII.DataPropertyName = "MucLuongII";
-            this.colMucLuongII.HeaderText = "Mức Lương II";
-            this.colMucLuongII.Name = "colMucLuongII";
-            // 
-            // colMucLuongIII
-            // 
-            this.colMucLuongIII.DataPropertyName = "MucLuongIII";
-            this.colMucLuongIII.HeaderText = "Mức Lương III";
-            this.colMucLuongIII.Name = "colMucLuongIII";
-            // 
             // lblSoLuong
             // 
             this.lblSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -211,7 +211,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Frm_TraCuuLuongNhanVien";
-            this.Text = "Tra Cứu Lương Nhân Viên";
+            this.Text = "Tra Cứu Lương Theo Chức Vụ";
             this.Load += new System.EventHandler(this.Frm_TraCuuLuongNhanVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLuong)).EndInit();
             this.ResumeLayout(false);
