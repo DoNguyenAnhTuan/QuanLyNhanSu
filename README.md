@@ -7,7 +7,7 @@ Dự án quản lý nhân sự có chức năng thường xuyên thông báo cho
 Nguồn dữ liệu đầu vào của hệ thống bao gồm: các thông tin từ các hệ thống thông tin xử lý giao dịch như các dữ liệu về chức vụ, ngoại ngữ của nhân viên (tên nhân viên, mã nhân viên,ngày sinh, điện thoại, tên đăng nhập, mật khẩu…của nhân viên. Nguồn dữ liệu đầu ra của hệ thống này bao gồm các báo cáo quản lý như các báo cáo về nhân viên tên vị trí và lương của các bộ phận,đăng nhập,đăng ký,sửa tài khoản. 
 
 
-4.Nội dung bài toán
+3.Nội dung bài toán
 
 Các chức năng cơ bản của hệ thống: -Quản lý nhân sự:
 
@@ -43,7 +43,7 @@ Báo cáo tổng hợp -Báo cáo, Thống kê
 
 Thống kê Báo cáo về nhân sự
 
-5.Hướng phát triển thêm cho bài toán:
+4.Hướng phát triển thêm cho bài toán:
 
 - Xây dựng giao diện đẹp hơn
 - Thêm nhiều chức năng cho phần mềm 
