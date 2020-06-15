@@ -33,17 +33,15 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_ThongTinChucVu));
             this.dgvChucVu = new System.Windows.Forms.DataGridView();
-            this.colMaChucVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTenChucVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colChon = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.btnThem = new System.Windows.Forms.ToolStripButton();
-            this.btnLuu = new System.Windows.Forms.ToolStripButton();
             this.btnSua = new System.Windows.Forms.ToolStripButton();
             this.btnXoa = new System.Windows.Forms.ToolStripButton();
             this.btnEE = new System.Windows.Forms.ToolStripButton();
             this.btnThoat = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.colMaChucVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTenChucVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChucVu)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -66,8 +64,7 @@
             this.dgvChucVu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvChucVu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colMaChucVu,
-            this.colTenChucVu,
-            this.colChon});
+            this.colTenChucVu});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -79,39 +76,18 @@
             this.dgvChucVu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvChucVu.Location = new System.Drawing.Point(0, 25);
             this.dgvChucVu.Name = "dgvChucVu";
-            this.dgvChucVu.ReadOnly = true;
             this.dgvChucVu.RowHeadersVisible = false;
             this.dgvChucVu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvChucVu.Size = new System.Drawing.Size(604, 267);
+            this.dgvChucVu.Size = new System.Drawing.Size(403, 267);
             this.dgvChucVu.TabIndex = 5;
+            this.dgvChucVu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvChucVu_CellContentClick);
             this.dgvChucVu.Click += new System.EventHandler(this.dgvChucVu_Click);
-            // 
-            // colMaChucVu
-            // 
-            this.colMaChucVu.DataPropertyName = "MaChucVu";
-            this.colMaChucVu.HeaderText = "Mã Chức Vụ";
-            this.colMaChucVu.Name = "colMaChucVu";
-            this.colMaChucVu.ReadOnly = true;
-            // 
-            // colTenChucVu
-            // 
-            this.colTenChucVu.DataPropertyName = "TenChucVu";
-            this.colTenChucVu.HeaderText = "Tên Chức Vụ";
-            this.colTenChucVu.Name = "colTenChucVu";
-            this.colTenChucVu.ReadOnly = true;
-            this.colTenChucVu.Width = 400;
-            // 
-            // colChon
-            // 
-            this.colChon.HeaderText = "Chon";
-            this.colChon.Name = "colChon";
-            this.colChon.ReadOnly = true;
             // 
             // statusStrip1
             // 
             this.statusStrip1.Location = new System.Drawing.Point(0, 270);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(604, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(403, 22);
             this.statusStrip1.TabIndex = 6;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -124,16 +100,6 @@
             this.btnThem.Size = new System.Drawing.Size(41, 22);
             this.btnThem.Text = "Thêm";
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            // 
-            // btnLuu
-            // 
-            this.btnLuu.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
-            this.btnLuu.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(56, 22);
-            this.btnLuu.Text = "Nộp Bài ";
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnSua
             // 
@@ -179,22 +145,34 @@
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnThem,
-            this.btnLuu,
             this.btnSua,
             this.btnXoa,
             this.btnEE,
             this.btnThoat});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(604, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(403, 25);
             this.toolStrip1.TabIndex = 4;
             this.toolStrip1.Text = "toolStrip1";
+            // 
+            // colMaChucVu
+            // 
+            this.colMaChucVu.DataPropertyName = "MaChucVu";
+            this.colMaChucVu.HeaderText = "Mã Chức Vụ";
+            this.colMaChucVu.Name = "colMaChucVu";
+            // 
+            // colTenChucVu
+            // 
+            this.colTenChucVu.DataPropertyName = "TenChucVu";
+            this.colTenChucVu.HeaderText = "Tên Chức Vụ";
+            this.colTenChucVu.Name = "colTenChucVu";
+            this.colTenChucVu.Width = 300;
             // 
             // Frm_ThongTinChucVu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(604, 292);
+            this.ClientSize = new System.Drawing.Size(403, 292);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.dgvChucVu);
             this.Controls.Add(this.toolStrip1);
@@ -212,15 +190,13 @@
         #endregion
         private System.Windows.Forms.DataGridView dgvChucVu;
         private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colMaChucVu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colTenChucVu;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn colChon;
         private System.Windows.Forms.ToolStripButton btnThem;
-        private System.Windows.Forms.ToolStripButton btnLuu;
         private System.Windows.Forms.ToolStripButton btnSua;
         private System.Windows.Forms.ToolStripButton btnXoa;
         private System.Windows.Forms.ToolStripButton btnEE;
         private System.Windows.Forms.ToolStripButton btnThoat;
         private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colMaChucVu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTenChucVu;
     }
 }

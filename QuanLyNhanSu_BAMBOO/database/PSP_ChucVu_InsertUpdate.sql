@@ -16,6 +16,6 @@ where MaChucVu=@MaChucVu
 end
  else
  begin
- insert into ChucVu(TenChucVu)
+ insert into dbo.ChucVu(TenChucVu)
  values (@TenChucVu)
  end

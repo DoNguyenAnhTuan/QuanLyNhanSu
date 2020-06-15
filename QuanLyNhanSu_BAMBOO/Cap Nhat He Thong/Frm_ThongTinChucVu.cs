@@ -48,29 +48,49 @@ namespace QuanLyNhanSu_BAMBOO.Cap_Nhat_He_Thong
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            if (chucVu != null)
+            dgvChucVu.EndEdit();
+            if (dgvChucVu.Rows.Count > 0)
             {
-                if (MessageBox.Show(string.Format("Chương trình sẽ thực hiện thao tác xóa chức vụ {0} khỏi hệ thống\n Việc này sẽ làm cho dữ liệu của nhân viên {1} bị thay đổi và không thể phục hồi\n Bạn có chắc chắn muốn xóa dữ liệu này không?\n Nếu đồng ý chọn OK. Ngược lại chọn Cancel", chucVu.TenChucVu, chucVu.TenChucVu), "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+                for (int i = dgvChucVu.Rows.Count - 1; i >= 0; i--)
                 {
-                    count = 0;
-                    if (bd.XoaChucVuByDeleteByUpdateIsDelete(ref err, ref count, chucVu.MaChucVu))
+                    if (dgvChucVu.Rows[i].Cells["colDelete"].Value.ToString().Equals("1"))
                     {
-                        if (count > 0)
+                        if (bd.XoaChucVu(ref err, dgvChucVu.Rows[i].Cells["colMaChucVu"].Value.ToString()))
                         {
-                            MessageBox.Show("Xóa thành công");
-                            HienThiDanhSachChucVu();
+
                         }
                         else
                         {
-                            MessageBox.Show("Xóa không thành công\n" + err);
+                            MessageBox.Show(err);
                         }
                     }
-                    else
-                    {
-                        MessageBox.Show("Xóa không thành công\n" + err);
-                    }
                 }
+                HienThiDanhSachChucVu();
             }
+
+            //if (chucVu != null)
+            //{
+            //    if (MessageBox.Show(string.Format("Chương trình sẽ thực hiện thao tác xóa chức vụ {0} khỏi hệ thống\n Việc này sẽ làm cho dữ liệu của nhân viên {1} bị thay đổi và không thể phục hồi\n Bạn có chắc chắn muốn xóa dữ liệu này không?\n Nếu đồng ý chọn OK. Ngược lại chọn Cancel", chucVu.TenChucVu, chucVu.TenChucVu), "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+            //    {
+            //        count = 0;
+            //        if (bd.XoaChucVuByDeleteByUpdateIsDelete(ref err, ref count, chucVu.MaChucVu))
+            //        {
+            //            if (count > 0)
+            //            {
+            //                MessageBox.Show("Xóa thành công");
+            //                HienThiDanhSachChucVu();
+            //            }
+            //            else
+            //            {
+            //                MessageBox.Show("Xóa không thành công\n" + err);
+            //            }
+            //        }
+            //        else
+            //        {
+            //            MessageBox.Show("Xóa không thành công\n" + err);
+            //        }
+            //    }
+            //}
         }
 
         private void btnEE_Click(object sender, EventArgs e)
@@ -104,7 +124,7 @@ namespace QuanLyNhanSu_BAMBOO.Cap_Nhat_He_Thong
         private void HienThiDanhSachChucVu()
         {
             DataTable chucVu = new DataTable();
-            chucVu = bd.LayDanhSachChucVu(ref err);
+            chucVu = bd.layDanhSachChucVu(ref err);
             dgvChucVu.DataSource = chucVu;
         }
 
@@ -116,6 +136,11 @@ namespace QuanLyNhanSu_BAMBOO.Cap_Nhat_He_Thong
                 chucVu.MaChucVu = dgvChucVu.CurrentRow.Cells["colMaChucVu"].Value.ToString();
                 chucVu.TenChucVu = dgvChucVu.CurrentRow.Cells["colTenChucVu"].Value.ToString();           
             }
+        }
+
+        private void dgvChucVu_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

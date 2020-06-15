@@ -47,6 +47,15 @@ namespace QuanLyNhanSu_BAMBOO.DanhMuc
                 new SqlParameter("@TenChucVu", chucVu.TenChucVu));
                
         }
+        public DataTable layDanhSachChucVu(ref string err)
+        {
+            return data.GetDataTable(ref err, "PSP_tblChucVu_select", CommandType.StoredProcedure, null);
+        }
+        public bool XoaChucVu(ref string err, string MaChucVu)
+        {
+            return data.MyExcuteNonQuery(ref err, "PSP_ChucVu_Xoa", CommandType.StoredProcedure,
+                new SqlParameter("@MaChucVu", MaChucVu));
+        }
         public bool XoaChucVuByDelete(ref string err, ref int count, string maChucVu)
         {
             return data.MyExcuteNonQuery(ref err, ref count, "PSP_ChucVu_Delete", CommandType.StoredProcedure,

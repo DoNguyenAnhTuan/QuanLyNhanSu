@@ -43,7 +43,6 @@
             this.dgvNgonNgu = new System.Windows.Forms.DataGridView();
             this.colMaNgonNgu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTenNgonNgu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colChon = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNgonNgu)).BeginInit();
             this.SuspendLayout();
@@ -52,7 +51,7 @@
             // 
             this.statusStrip1.Location = new System.Drawing.Point(0, 254);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(306, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(405, 22);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -67,7 +66,7 @@
             this.btnThoat});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(306, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(405, 25);
             this.toolStrip1.TabIndex = 3;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -149,8 +148,7 @@
             this.dgvNgonNgu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNgonNgu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colMaNgonNgu,
-            this.colTenNgonNgu,
-            this.colChon});
+            this.colTenNgonNgu});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -165,7 +163,7 @@
             this.dgvNgonNgu.ReadOnly = true;
             this.dgvNgonNgu.RowHeadersVisible = false;
             this.dgvNgonNgu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvNgonNgu.Size = new System.Drawing.Size(306, 229);
+            this.dgvNgonNgu.Size = new System.Drawing.Size(405, 229);
             this.dgvNgonNgu.TabIndex = 6;
             this.dgvNgonNgu.Click += new System.EventHandler(this.dgvNgonNgu_Click);
             // 
@@ -182,18 +180,13 @@
             this.colTenNgonNgu.HeaderText = "Tên Ngôn Ngữ";
             this.colTenNgonNgu.Name = "colTenNgonNgu";
             this.colTenNgonNgu.ReadOnly = true;
-            // 
-            // colChon
-            // 
-            this.colChon.HeaderText = "Chon";
-            this.colChon.Name = "colChon";
-            this.colChon.ReadOnly = true;
+            this.colTenNgonNgu.Width = 300;
             // 
             // Frm_ThongTinNgonNgu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(306, 276);
+            this.ClientSize = new System.Drawing.Size(405, 276);
             this.Controls.Add(this.dgvNgonNgu);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.statusStrip1);
@@ -221,6 +214,5 @@
         private System.Windows.Forms.DataGridView dgvNgonNgu;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMaNgonNgu;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTenNgonNgu;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn colChon;
     }
 }
