@@ -80,10 +80,10 @@
             this.Controls.Add(this.txtPath);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Frm_SaoLuuPhucHoi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Frm_SaoLuuPhucHoi";
+            this.Text = "Sao lưu phục hồi";
             this.Load += new System.EventHandler(this.Frm_SaoLuuPhucHoi_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

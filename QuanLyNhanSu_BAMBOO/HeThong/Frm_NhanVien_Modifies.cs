@@ -92,5 +92,14 @@ namespace QuanLyNhanSu_BAMBOO.HeThong
             nhanVien.TenDangNhap = txtTenDangNhap.Text;
             nhanVien.MatKhau = txtMatKhau.Text;
         }
+
+        private void txtDienThoai_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+                MessageBox.Show("kkhông được nhập chữ");
+            }
+        }
     }
 }

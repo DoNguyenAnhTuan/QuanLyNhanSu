@@ -90,5 +90,10 @@ namespace QuanLyNhanSu_BAMBOO
             Tra_Cuu_Thong_Tin.Frm_TraCuuLuongNhanVien frm_TraCuuLuongNhanVien = new Tra_Cuu_Thong_Tin.Frm_TraCuuLuongNhanVien();
             frm_TraCuuLuongNhanVien.ShowDialog();
         }
+
+        private void mnuThoat_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

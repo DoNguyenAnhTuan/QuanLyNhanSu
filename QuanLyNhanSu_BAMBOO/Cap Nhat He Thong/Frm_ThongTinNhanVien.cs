@@ -90,5 +90,15 @@ namespace QuanLyNhanSu_BAMBOO.Cap_Nhat_He_Thong
                 txtGVCN.Text = dgvDanhSach.CurrentRow.Cells["colDienThoai"].Value.ToString();
             }
         }
+
+        private void txtGVCN_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+                MessageBox.Show("kkhông được nhập chữ");
+
+            }
+        }
     }
 }

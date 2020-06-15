@@ -93,6 +93,7 @@
             this.txtDienThoai.Name = "txtDienThoai";
             this.txtDienThoai.Size = new System.Drawing.Size(240, 29);
             this.txtDienThoai.TabIndex = 6;
+            this.txtDienThoai.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDienThoai_KeyPress);
             // 
             // label3
             // 
@@ -203,9 +204,9 @@
             this.Controls.Add(this.txtMaNhanVien);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Frm_NhanVien_Modifies";
-            this.Text = "Frm_NhanVien_Modifies";
+            this.Text = "Sửa thông tin người dùng";
             this.Load += new System.EventHandler(this.Frm_NhanVien_Modifies_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
