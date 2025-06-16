@@ -1,57 +1,77 @@
-1.Mô tả bài toán
 
-Dự án quản lý nhân sự có chức năng thường xuyên thông báo cho ban lãnh đạo về thông tin nhân viên các khu: nhân viên chức vụ, nhân viên ngoại ngữ, thông tin nhân viên,... hệ thống này được đặt dưới sự chỉ đạo trực tiếp của giám đốc. Với chức năng như vậy, hệ thống quản lý nhân sự có nhiệm vụ luôn cập nhật hồ sơ cán bộ công nhân viên theo quy định, thường xuyên bổ xung những thông tin thay đổi trong quá trình công tác của cán bộ công nhân viên, việc theo dõi và quản lý lao động cũng là nhiệm vụ quan trọng của hệ thống. Ngoài ra, công tác thống kê báo cáo tình hình theo yêu cầu của ban giám đốc cũng là nhiệm vụ không thể thiếu trong hệ thống quản lý cán bộ.
+```markdown
+# 🧑‍💼 Quản Lý Nhân Sự - WinForms App
 
-2.Mục đích bài toán
+**Ứng dụng quản lý nhân sự được xây dựng bằng C# WinForms, cho phép người dùng thêm, sửa, xóa và tìm kiếm thông tin nhân viên.**  
+Hệ thống sử dụng SQL Server để lưu trữ dữ liệu và hỗ trợ giao diện thân thiện với người dùng.
 
-Nguồn dữ liệu đầu vào của hệ thống bao gồm: các thông tin từ các hệ thống thông tin xử lý giao dịch như các dữ liệu về chức vụ, ngoại ngữ của nhân viên (tên nhân viên, mã nhân viên,ngày sinh, điện thoại, tên đăng nhập, mật khẩu…của nhân viên. Nguồn dữ liệu đầu ra của hệ thống này bao gồm các báo cáo quản lý như các báo cáo về nhân viên tên vị trí và lương của các bộ phận,đăng nhập,đăng ký,sửa tài khoản. 
+---
 
+## 🚀 Tính năng chính
 
-3.Nội dung bài toán
+- 📝 Thêm, sửa, xóa thông tin nhân viên
+- 🔍 Tìm kiếm nhân viên theo tên, mã số
+- 🧾 Quản lý danh sách nhân sự trong tổ chức
+- 💾 Kết nối SQL Server để lưu dữ liệu
+- 📊 Hiển thị dữ liệu trong bảng DataGridView
 
-Các chức năng cơ bản của hệ thống: -Quản lý nhân sự:
+---
 
-Cập nhật Chức năng.
+## 🛠 Công nghệ sử dụng
 
-Tra cứu thông tin nhân viên.
+- **Ngôn ngữ**: C#  
+- **Giao diện**: Windows Forms (WinForms)  
+- **Cơ sở dữ liệu**: Microsoft SQL Server  
+- **Môi trường phát triển**: Visual Studio
 
-Tra cứu thông tin ngoại ngữ.
+---
 
-Tra cứu thông tin Chức vụ.
+## 📦 Cấu trúc thư mục
 
-Tra cứu thông tin lương cơ bản.
+```
 
-Thêm, sửa xóa các đơn thể dữ liêu (Nhân viên, chức vụ, ngoại ngữ… -Người dùng:
+QuanLyNhanSu/
+├── FormMain.cs         # Giao diện chính
+├── FormNhanVien.cs     # Quản lý nhân viên
+├── NhanVien.cs         # Class nhân viên (model)
+├── DataAccess.cs       # Kết nối CSDL
+└── QuanLyNhanSu.sql    # File khởi tạo database
 
-Đăng nhập
+````
 
-Đăng xuất
+---
 
-Thêm người dùng mới
+## 📸 Giao diện minh họa
 
--Tra cứu,Tìm kiếm :
+> Bạn có thể thêm ảnh chụp màn hình vào đây để minh họa giao diện ứng dụng.
 
-Tra cứu theo hồ sơ lý lịch.
+---
 
-Tổng hợp tra cứu
+## 📥 Hướng dẫn chạy dự án
 
-Báo cáo, Thống kê
+1. Clone repo:
+```bash
+git clone https://github.com/DoNguyenAnhTuan/QuanLyNhanSu.git
+````
 
-Thống kê Báo cáo về nhân sự
+2. Mở project bằng **Visual Studio**
+3. Cấu hình lại chuỗi kết nối SQL trong file `DataAccess.cs` nếu cần
+4. Build và chạy ứng dụng (`F5`)
 
-Báo cáo tổng hợp -Báo cáo, Thống kê
+---
 
-Thống kê Báo cáo về nhân sự
+## 🧑‍🎓 Tác giả
 
-4.Hướng phát triển thêm cho bài toán:
+**Do Nguyen Anh Tuan**
+MSc in Information Technology - LHU
+FabLab EIU - Binh Duong 🇻🇳
+📫 [https://github.com/DoNguyenAnhTuan](https://github.com/DoNguyenAnhTuan)
 
-- Xây dựng giao diện đẹp hơn
-- Thêm nhiều chức năng cho phần mềm 
-- Setup ra hệ thống 
-- Thêm ảnh
-5. Phân chia công việc trong dự án quản lý nhân sự
-- Tuấn(Nhóm trưởng): Viết báo cáo,so sách các kết quả khảo sát và đề pháp phương án giải pháp,lập trình và viết code form con và hệ thống,DLL,class,sắp xếp và quản lý thời gian,viết github readme,…
-- Toàn(Phó thư ký): Làm trello,tìm kiếm tham khảo các tài liệu mạng và you tube,…
-- Phúc(Nhóm phó): Tìm kiếm thông tin, khảo sát thực tế ,tìm hiểu thêm về github và setup,…
-- Nhung(Thư ký): Nhập dữ liệu của sql quản lý nhân sự, làm sql các ràng buộc toàn vẹn,chụp ảnh nhóm,…
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+```
 
